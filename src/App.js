@@ -3,7 +3,6 @@ import { View } from 'react-native';
 import firebase from 'firebase';
 import { Header, Button, Spinner } from './components/common';
 import LoginForm from './components/LoginForm';
-import { height } from 'window-size';
 
 class App extends Component  {
     state = {loggedIn : null}
@@ -49,7 +48,9 @@ class App extends Component  {
         return (
             <View>
                 <Header headerText="Authentication" />
+                <View style={{height: 50}}>
                     {this.renderContent()}
+                </View>
             </View>
         )
     }
